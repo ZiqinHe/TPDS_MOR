@@ -23,29 +23,6 @@ for i = 1:L+1
         H1((i-1)*l+1:i*l,(j-1)*m+1:j*m,:) = image_data((i+j-1)*l+1:(i+j)*l,:,:); 
     end
 end
-%% Visualize the output as images
-
-figure
-i=0;
-imagesc(image_data((i)*l+1:(i+1)*l,:,:));
-set(gca, 'XTick', [], 'YTick', []);  % Remove x and y tick numbers
-axis square;
-grid on;
-
-figure
-i=1;
-imagesc(image_data((i)*l+1:(i+1)*l,:,:));
-set(gca, 'XTick', [], 'YTick', []);  % Remove x and y tick numbers
-axis square;
-grid on;
-
-figure
-i=20;
-imagesc(image_data((i)*l+1:(i+1)*l,:,:));
-set(gca, 'XTick', [], 'YTick', []);  % Remove x and y tick numbers
-axis square;
-grid on;
-
 
 
 %% apply T-ERA to image data, reconstruct image data and calculate relative error
